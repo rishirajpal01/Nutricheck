@@ -1,33 +1,66 @@
-<?php 
- session_start();
- if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: index.php");
-    exit;
-}
-?>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutricheck - Fruits</title>    
-    <link rel="stylesheet" href="css/fruits.css">
-</head> 
-<?php include('templates/header.php');  ?>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="fruits.css">  <!-- Yaha meat.css likha tha-->
+    <title>FRUITS</title>
+</head>
+<!-- Change Font in this documeny MARTIAL is what we are doing -->
 
-<section id="gallery">
-        <div class="container">
+<body>
+    <nav class="navbar fixed-top mb-5 navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="../1Landing Page/index.html" target="_blank"><img src="../Img/nutricheck2.png" alt="brand_logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">  <!--mb2 does nothing here-->
+                     <!--Nav bar toggles-->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Dairy List Page/dairy.html" target="_blank">DAIRY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" target="_blank">FRUITS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Meat List Page/meat.html" target="_blank">MEAT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Vegetable List Page/vegetable.html" target="_blank">VEGETABLES</a>
+                    </li>
+                </ul>
+
+                <span class="navbar-text">
+                    <p id="date"></p>
+                    <script>
+                        document.getElementById("date").innerHTML = Date();
+                    </script>
+                </span>
+
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <!--BOX CONTIANERS-->
+    <section id="gallery">
+        <div class="container-fluid">
             <div class="row">
 
                 <!--BOX 1-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/apple1.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/apple1.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">APPLE</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content (224g) </p>
                             <p class="card-text">Carbohydrate - 34g </p>
                             <p class="card-text">Protien - 1g</p>
@@ -40,13 +73,11 @@
                 </div>
 
                 <!--BOX 2-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/banana.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/banana.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">BANANA</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(55g) </p>
                             <p class="card-text">Carbohydrate - 16.9g</p>
                             <p class="card-text">Protien - 7.9g </p>
@@ -59,13 +90,11 @@
                 </div>
 
                 <!--BOX 3-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/orange.jfif" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/orange.jfif" alt="">
                         <div class="card-body">
                             <h5 class="card-title">ORANGE</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(250) </p>
                             <p class="card-text">Carbohydrate - 29g</p>
                             <p class="card-text">Protien - 7g</p>
@@ -78,13 +107,11 @@
                 </div>
 
                 <!--BOX 4-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/papaya.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/papaya.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">PAPAYA</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(140g) </p>
                             <p class="card-text">Carbohydrate - 19g</p>
                             <p class="card-text">Protien - 0g</p>
@@ -97,13 +124,11 @@
                 </div>
 
                 <!--BOX 5-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/mango.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/mango.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">MANGO</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content (140g)</p>
                             <p class="card-text">Carbohydrate - 27g</p>
                             <p class="card-text">Protien - 0g</p>
@@ -116,13 +141,11 @@
                 </div>
 
                 <!--BOX 6-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/watermelon.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/watermelon.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">WATERMELON</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(154g) </p>
                             <p class="card-text">Carbohydrate - 12g</p>
                             <p class="card-text">Protien - 1g</p>
@@ -137,13 +160,11 @@
 
 
                 <!--BOX 7-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/guava.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/guava.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">GUAVA</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(100g) </p>
                             <p class="card-text">Carbohydrate - 14g</p>
                             <p class="card-text">Protien - 3g</p>
@@ -156,13 +177,11 @@
                 </div>
 
                 <!--BOX 8-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/strawberry.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/strawberry.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">STRAWBERRY</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(144g) </p>
                             <p class="card-text">Carbohydrate - 11g</p>
                             <p class="card-text">Protien - 1g</p>
@@ -175,13 +194,11 @@
                 </div>
 
                 <!--BOX 9-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Fruits/pineapple1.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Fruits/pineapple1.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">PINEAPPLE</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(100g) </p>
                             <p class="card-text">Carbohydrate - 12g</p>
                             <p class="card-text">Protien - 1g</p>
@@ -196,6 +213,21 @@
             </div>
         </div>
     </section>
+    <script>
+        document
+            .querySelectorAll('.btn.btn-outline-danger.btn-sm')
+            .forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.alert('You Have Liked This Product!!');
+                });
+            });
+    </script>
 
-    <?php include('templates/footer.php');  ?>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
 </html>

@@ -30,10 +30,10 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: border .2s ease-in-out;
-
+    margin-left: 5px;
     
-    width:  300px;  /*makes the picture size same*/
-    height: 300px;
+    width:  480px;  /*makes the picture size same*/
+    height: 480px;
     background-size: cover;
 }
 
@@ -60,14 +60,6 @@
 }
 .card-img-top:hover{    
     transform: scale(1.03);
-}
-.card-body {
-    font-weight: bold;
-}
-
-.card-title {
-    font-weight: bold;
-    text-decoration: underline;
 }
 /*
 body {  

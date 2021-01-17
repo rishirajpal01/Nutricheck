@@ -1,33 +1,67 @@
-<?php 
- session_start();
- if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: index.php");
-    exit;
-}
-?>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutricheck - Vegetables</title>    
-    <link rel="stylesheet" href="css/vegetable.css">
-</head> 
-<?php include('templates/header.php');  ?>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="vegetable.css">
+    <title>VEGETABLE</title>
+</head>
+<!-- Change Font in this documeny MARTIAL is what we are doing -->
 
-<section id="gallery">
-        <div class="container">
+<body>
+    <nav class="navbar fixed-top mb-5 navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="../1Landing Page/index.html" target="_blank"><img src="../Img/nutricheck2.png" alt="brand_logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">             <!--mb2 does nothing here-->
+                    <!--Nav bar toggles-->
+                   
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Dairy List Page/dairy.html" target="_blank">DAIRY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Fruits List Page/fruits.html" target="_blank">FRUITS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Meat List Page/meat.html" target="_blank">MEAT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" target="_blank">VEGETABLES</a>
+                    </li>
+                </ul>
+
+                <span class="navbar-text">
+                    <p id="date"></p>
+                    <script>
+                        document.getElementById("date").innerHTML = Date();
+                    </script>
+                </span>
+
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <!--BOX CONTIANERS-->
+    <section id="gallery">
+        <div class="container-fluid">
             <div class="row">
 
                 <!--BOX 1-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/spinach.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/spinach.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">SPINACH</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content (100g) </p>
                             <p class="card-text">Carbohydrate - 5g </p>
                             <p class="card-text">Protien -12g </p>
@@ -40,32 +74,28 @@
                 </div>
 
                 <!--BOX 2-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/cabbage.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/cabbage.jpg" alt="">
                         <div class="card-body">
-                        <h5 class="card-title">CABBAGE</h5> 
-                        </div>
-                            <div class="card-body"data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
-                                <p class="card-text">Nutritional content (100g) </p>
-                                <p class="card-text">Carbohydrate - 2.2g </p>
-                                <p class="card-text">Protien - 1.5g </p>
-                                <p class="card-text">Fat - 0.2g </p>
-                                <a href="https://en.wikipedia.org/wiki/Cabbage" target="_blank" class="btn btn-outline-success btn-sm">WIKI</a>
-                                <a href="https://www.fitnessvsweightloss.com/wp-content/uploads/2014/06/Nutrition-chart-of-Chinese-cabbage.png" target="_blank" class="btn btn-outline-success btn-sm">Complete Facts</a>
-                                <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-                            </div>
+                            <h5 class="card-title">CABBAGE</h5>
+                            <p class="card-text">Nutritional content (100g) </p>
+                            <p class="card-text">Carbohydrate - 2.2g </p>
+                            <p class="card-text">Protien - 1.5g </p>
+                            <p class="card-text">Fat - 0.2g </p>
+                            <a href="https://en.wikipedia.org/wiki/Cabbage" target="_blank" class="btn btn-outline-success btn-sm">WIKI</a>
+                            <a href="https://www.fitnessvsweightloss.com/wp-content/uploads/2014/06/Nutrition-chart-of-Chinese-cabbage.png" target="_blank" class="btn btn-outline-success btn-sm">Complete Facts</a>
+                            <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
                         </div>
                     </div>
+                </div>
 
                 <!--BOX 3-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/cauliflower.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/cauliflower.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">CAULIFLOWER</h5>
-                        </div>
-                        <div class="card-body" data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(100g) </p>
                             <p class="card-text">Carbohydrate - 4.97g </p>
                             <p class="card-text">Protien - 1.92g </p>
@@ -78,13 +108,11 @@
                 </div>
 
                 <!--BOX 4-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/potato.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/potato.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">POTATO</h5>
-                        </div>
-                        <div class="card-body"data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(148g) </p>
                             <p class="card-text">Carbohydrate - 26g </p>
                             <p class="card-text">Protien - 3g </p>
@@ -97,13 +125,11 @@
                 </div>
 
                 <!--BOX 5-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/sweet_potato.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/sweet_potato.jpg" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">SWEET PAPATO</h5>
-                        </div>
-                        <div class="card-body"data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
+                            <h5 class="card-title">SWEET POTATO</h5>
                             <p class="card-text">Nutritional content (38g) </p>
                             <p class="card-text">Carbohydrate - 15g </p>
                             <p class="card-text">Protien - 5.6g </p>
@@ -116,13 +142,11 @@
                 </div>
 
                 <!--BOX 6-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/beet_root.jpeg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/beet_root.jpeg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">BEET ROOT</h5>
-                        </div>
-                        <div class="card-body"data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(123g) </p>
                             <p class="card-text">Carbohydrate - 20.6g </p>
                             <p class="card-text">Protien - 1.7g </p>
@@ -137,13 +161,11 @@
 
 
                 <!--BOX 7-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/bell_pepper.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/bell_pepper.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">BELL PEPPER</h5>
-                        </div>
-                        <div class="card-body"data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content (100g) </p>
                             <p class="card-text">Carbohydrate - 4g </p>
                             <p class="card-text">Protien - 1g </p>
@@ -156,13 +178,11 @@
                 </div>
 
                 <!--BOX 8-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/broccoli.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/broccoli.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">BROCCOLI</h5>
-                        </div>
-                        <div class="card-body"data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content(146g) </p>
                             <p class="card-text">Carbohydrate - 9.2g </p>
                             <p class="card-text">Protien - 3.8g </p>
@@ -175,13 +195,11 @@
                 </div>
 
                 <!--BOX 9-->
-                <div class="col l4 s12" style="padding-top:20px">
+                <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img class="card-img-top" id="picallign" src="img/Vegetable/peas.jpg" alt="">
+                        <img class="card-img-top" id="picallign" src="../Img/Vegetable/peas.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">PEAS</h5>
-                        </div>
-                        <div class="card-body"data-center-center="opacity:1;left:0px;" data-0-bottom="opacity:0;left:500px;">
                             <p class="card-text">Nutritional content (100g) </p>
                             <p class="card-text">Carbohydrate - 3.69h </p>
                             <p class="card-text">Protien - 0.6g </p>
@@ -196,6 +214,23 @@
             </div>
         </div>
     </section>
+    
+    <!--Alert Box for like button-->
+    <script>
+        document
+            .querySelectorAll('.btn.btn-outline-danger.btn-sm')
+            .forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.alert('You Have Liked This Product!!');
+                });
+            });
+    </script>
 
-<?php include('templates/footer.php');  ?>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
 </html>
