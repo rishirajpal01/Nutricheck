@@ -1,0 +1,110 @@
+/*header{
+        background-color: rgb(255, 233, 31);
+        font-family: 'Permanent Marker', cursive;
+        color:limegreen;
+        font-size: 35px;
+        height: 45px;
+        text-align: center;
+        } */
+
+.outline{
+          width: 24.8%;
+          display: inline-table;
+          height: 750px;        
+        }
+
+#fruits{
+          background-image: url("https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+          color: white;
+          font-size: 40px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+    
+#fruittext{ background-color: rgba(236, 41, 41, 0.815);  }
+
+
+
+#meat{
+        background-image: url("../Img/2_page/meat.jpg");
+        color: white;
+        background-size: cover;
+        font-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+            
+      }
+
+#meattext{ background-color: rgba(61, 59, 59, 0.808); }
+
+
+
+#vegetable{
+            background-image: url("https://images.pexels.com/photos/3872373/pexels-photo-3872373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            color: white; 
+            font-size: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+#vegtext{  background-color: rgba(39, 177, 39, 0.829); }
+         
+
+
+#dairy{
+        background-image: url("https://images.pexels.com/photos/4109946/pexels-photo-4109946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        color: white;
+        background-repeat: no-repeat;
+        font-size: 40px;
+        background-position: center;
+        
+      }
+
+#dairytext{  background-color: #c5975a9c;  }
+
+
+
+.centre {
+          text-align: center;
+          margin-top: 430px;
+          font-family: 'Roboto Mono', monospace;
+          background-color: rgb(150, 5, 5);           
+        }
+
+
+body{
+    
+    height: 100%;
+}
+
+
+.navbar{
+    overflow: hidden;
+    position: fixed;   /* Set the navbar to fixed position */
+    top: 0;
+    
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color:rgb(250, 219, 219); /*subhikshaa change this for background-color;*/
+    box-shadow: 0px 1px 10px; /*gives 3d/hovering effect to the navbar*/
+
+    color: rgb(250, 115, 115); /*subhikshaa change this for the text color */
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;   
+    text-decoration: none;
+
+    padding: 11px;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {   
+  color:white; /*subhikshaa change this for the font color when mouse is hovered on it */
+  text-decoration: dotted;
+}
+
+a{
+  text-decoration: none;  /*removes the line that was visible between columns*/
+  color: inherit;
+}
